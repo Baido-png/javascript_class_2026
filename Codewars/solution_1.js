@@ -3,18 +3,21 @@
  * Given a string made up of letters a, b, and/or c, 
  * switch the position of letters a and b (change a to b and vice versa). 
  * Leave any incidence of c untouched. Example: 'acb' --> 'bca' 'aabacbaa' --> 'bbabcabb'
+ * 
  */
 
+phoneNumber = ['0706', '373', '5920']
+console.log(phoneNumber.join(''))
 
 //Method 1
-// function switcheroo(x){
-//     return x.split('').map(x => x === 'a' ? 'b' : 'a').join('')
-// }
+function switcheroo(x){
+    return x.split('').map(x => x === 'a' ? 'b' : x === 'b' ? 'a' : 'c').join('')
+}
 
 //Method 2
-function switcheroo(x){
-    return x.replace(/a/g, 'temp').replace(/b/g, 'a').replace(/temp/g, 'b')
-}
+// function switcheroo(x){
+//     return x.replace(/a/g, 'temp').replace(/b/g, 'a').replace(/temp/g, 'b')
+// }
 
 //Method 3
 // function switcheroo(x){
@@ -51,3 +54,24 @@ function switcheroo(x){
 
 console.log(switcheroo('acb')) // 'bca'
 console.log(switcheroo('aabacbaa')) // 'bbabcabb'
+
+
+
+// alphaChar = 'bca'
+
+// newStr = ''
+
+// for(let i = 0; i < alphaChar.length; i++)
+// {
+//     if(alphaChar[i] == 'a')
+//     {
+//         newStr += 'b'
+//     }else if(alphaChar[i] == 'b')
+//     {
+//         newStr += 'a'
+//     }else{
+//         newStr += alphaChar[i]
+//     }
+// }
+
+// console.log(newStr)
